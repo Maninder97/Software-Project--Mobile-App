@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.ContributorsAndRaisers">
+  <ContentPage.Content>
+        <StackLayout Margin="20,35,20,20">
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+            </Grid>
+            
+            <Button Text="Home"
+                    BackgroundColor ="LightGreen"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand"
+                Clicked="Home_Clicked" />
+          
+            <Label Text="Companies And People who" 
+                   HorizontalTextAlignment="Center"
+                    TextColor ="OrangeRed"/>
+          
+            <Button     Text="Contributes in resolving the issue"
+                    BackgroundColor ="LightGreen"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Clicked="ContributorViewOnClicked" />
+            <Button     Text="Raised the issue"
+                    BackgroundColor ="LightGreen"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Clicked="RaisersViewOnClicked" />
+        </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

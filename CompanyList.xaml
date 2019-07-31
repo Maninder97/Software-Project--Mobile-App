@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.CompanyList">
+    <ContentPage.Content>
+
+        <StackLayout Margin="20,35,20,20">
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+            </Grid>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Home" BackgroundColor ="LightGreen" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" Clicked="Home_Clicked" />
+                <Button Text="Issue Resolvers"  BackgroundColor ="LightGreen" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" Clicked="ContributorViewOnClicked"/>
+                <Button Text="Issue Raisers"  BackgroundColor ="LightGreen" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" Clicked="RaisersViewOnClicked"/>
+            </StackLayout>
+            
+            <Label Text="Companies who raised the issue of RACISM"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+                    TextColor ="OrangeRed"/>
+            
+            <ListView>
+                <ListView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>European Network against racism(ENAR)</x:String>
+                        <x:String>Convention of Elimination of Racism</x:String>
+                        <x:String>World Conference Against Racism (WCAR)</x:String>
+                        <x:String>YWCA</x:String>
+                        
+                    </x:Array>
+                </ListView.ItemsSource>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

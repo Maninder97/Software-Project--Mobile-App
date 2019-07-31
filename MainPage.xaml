@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MobileApp"
+             x:Class="MobileApp.MainPage">
+
+    <StackLayout>
+        <Label Text="The World of Issues" 
+           HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  TextColor ="OrangeRed" FontAttributes="Bold"/>
+
+        <Image Source="http://cdn.24.co.za/files/Cms/General/d/2050/be4c8fdf334845329236dd9d868d68b4.jpg"/>
+
+        <Label Text="What is Racism? and Why it is a problem?" 
+           HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  TextColor ="Blue" FontAttributes="Bold"/>
+
+        <Label Text="Racism takes many forms and can happen in many places. It includes prejudice, discrimination or hatred directed at someone because of their colour, ethnicity or national origin. Racism is more than just words, beliefs and actions. It includes all the barriers that prevent people from enjoying dignity and equality because of their race. Racism causes harm to those who are on the receiving end. It hurts individuals, communities and our society at large. It can also hurt people's freedom and dignity. Those who endure racism can be made to feel they have less freedom, or are second-class citizens. In a diverse country such as Australia, the effects of racism aren't confined to individuals. It has the potential to affect all of us. Racial hostility creates a society where people don't trust and respect each other. It challenges our society's values of equality and fairness." 
+           HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  TextColor ="Blue"/>
+
+        <Label Text="Click the button below to see the list of people and companies those contributes towards resolving this issue and the list of those who raised this issue"
+            HorizontalOptions="Center" VerticalOptions="CenterAndExpand" TextColor="Black" />
+        
+        <Button     Text="View"
+                    BackgroundColor ="LightGreen"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Clicked="StaffViewOnClicked" />
+    </StackLayout>
+
+</ContentPage>

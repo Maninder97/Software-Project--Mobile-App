@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.IssueRaisers">
+    <ContentPage.Content>
+        <StackLayout Margin="20,35,20,20">
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+            </Grid>
+            
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Home" BackgroundColor ="LightGreen" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" Clicked="Home_Clicked" />
+                <Button Text="Issue Resolvers"  BackgroundColor ="LightGreen" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" Clicked="ContributorViewOnClicked"/>
+            </StackLayout>
+
+            <Label Text="Issue raisers" HorizontalTextAlignment="Center"  TextColor ="OrangeRed"/>
+
+            <Button     Text="People who raised the issue"
+                    BackgroundColor ="LightGreen"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Clicked="PeopleViewOnClicked" />
+            <Button     Text="Companies who raised the issue"
+                    BackgroundColor ="LightGreen"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Clicked="CompaniesViewOnClicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

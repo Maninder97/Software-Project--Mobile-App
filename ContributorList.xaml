@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.ContributorList">
+    <ContentPage.Content>
+        <StackLayout Margin="20,35,20,20">
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+            </Grid>
+                <StackLayout Orientation="Horizontal">
+                <Button Text="Home" BackgroundColor ="LightGreen" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" Clicked="Home_Clicked" />
+                <Button Text="Issue Raisers"  BackgroundColor ="LightGreen" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" Clicked="RaisersViewOnClicked"/>
+                </StackLayout>
+
+
+            <StackLayout>
+            <Label Text="People and companies who contributed in resolving the issue are listed below." 
+               FontAttributes="Bold"
+               HorizontalOptions="CenterAndExpand" />
+
+            <ListView>
+
+                <ListView.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                        <x:String>01 Arry</x:String>
+                        <x:String>02 John</x:String>
+                        <x:String>03 Gyna</x:String>
+                        </x:Array>
+                </ListView.ItemsSource>
+            </ListView>
+            </StackLayout>
+            
+            <ListView x:Name="PersonListView" HasUnevenRows="True" SeparatorVisibility="Default">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Padding="10" Margin="10">
+                                <Label Text="{Binding id}"/>
+                                <Label Text="{Binding Name}" />
+                                <Label Text="{Binding Phone}" />
+                                <Label Text="{Binding PhysicalAddress}" />
+                                <Label Text="{Binding Email}" />
+                                
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button     Text="Add New Contributor"
+                    BackgroundColor ="LightGreen"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Clicked="AddNewContributorClicked" />
+            <Button     Text="Modify Contributor"
+                    BackgroundColor ="LightGreen"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Clicked="ModifyClicked" />
+            <Button     Text="Delete Contributor"
+                    BackgroundColor ="LightGreen"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Clicked="DeleteClicked" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

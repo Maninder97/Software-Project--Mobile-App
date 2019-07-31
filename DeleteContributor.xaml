@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.DeleteContributor">
+    <ContentPage.Content>
+        <StackLayout Margin="20,35,20,20">
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+            </Grid>
+            
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Home" BackgroundColor ="LightGreen" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" Clicked="Home_Clicked" />
+                <Button Text="Issue Resolvers"  BackgroundColor ="LightGreen" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" Clicked="ContributorViewOnClicked"/>
+                <Button Text="Issue Raisers"  BackgroundColor ="LightGreen" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" Clicked="RaisersViewOnClicked"/>
+            </StackLayout>
+            
+            
+            <StackLayout>
+                <Label Text=" Delete Contributor" TextColor ="OrangeRed"  VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"/>
+                <ListView x:Name="Contributor"
+                      ItemsSource="{Binding Path = Contributors}"
+                      ListView.RowHeight ="150">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text=" Enter Contributors Id" TextColor ="OrangeRed"/>
+                                    <Entry Text="{Binding Id}" />
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                
+                <Button Text="Delete"
+                    BackgroundColor ="LightGreen"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Clicked="Delete_Clicked" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
